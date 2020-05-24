@@ -1,3 +1,11 @@
-https://learn.co/tracks/full-stack-web-development-v8/module-5-procedural-ruby/section-7-iteration/return-from-yield-statements
+def hello(array)
+  i = 0
+  collection = []
+  while i < array.length
+    collection << yield(array[i])
+    i += 1
+  end
+  collection
+end
 
 hello(["Tim", "Tom", "Jim"]) { |name| puts "Hi, #{name}" }
